@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Todo App</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f5ebe0;
+    color:#3e3e3e;
+}
+
+.navbar{
+    background:#8d7b68;
+    padding:18px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#f5ebe0;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#f5ebe0;
+    margin-left:20px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#e6ccb2;
+}
+
+.container{
+    width:90%;
+    margin:30px auto;
+    background:#ffffff;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.08);
+}
+
+h2{
+    margin-bottom:25px;
+    color:#8d7b68;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+input,
+textarea,
+select{
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:#f5ebe0;
+    color:#3e3e3e;
+    font-size:15px;
+}
+
+textarea{
+    resize:none;
+    height:120px;
+}
+
+.btn{
+    background:#a4907c;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#8d7b68;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:14px;
+}
+
+th{
+    background:#8d7b68;
+    color:white;
+    padding:16px;
+}
+
+td{
+    padding:14px;
+    text-align:center;
+    background:#fffaf5;
+    border-bottom:1px solid #e6d5c3;
+}
+
+tr:hover td{
+    background:#f3e4d7;
+}
+
+.badge{
+    padding:8px 14px;
+    border-radius:30px;
+    color:white;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.pending{
+    background:#b08968;
+}
+
+.progress{
+    background:#7f5539;
+}
+
+.completed{
+    background:#6b705c;
+}
+
+.action-links a{
+    text-decoration:none;
+    color:#7f5539;
+    font-weight:bold;
+    margin:0 6px;
+}
+
+.action-links a:hover{
+    color:#a4907c;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">Todo System</div>
+
+    <div class="nav-links">
+        <a href="/">Dashboard</a>
+        <a href="/add">Add Task</a>
+    </div>
+</div>
+
+<div class="container">
